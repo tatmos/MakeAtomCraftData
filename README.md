@@ -1,25 +1,38 @@
 # MakeAtomCraftData
-CRI Atom Craftのデータを自動生成する
-- Unity5上のC#スクリプトでADX2のワークユニットの生成をします。
-- Assets/Materialsにあるwavファイルを元にキューが作られます。
-- Assetsフォルダ以下に指定した名前のワークユニットが含まれたフォルダが生成されます。
+
+## タイトル
+MakeAtomCraftData（CRI Atom Craftのデータ自動生成ツール）
+
+## 概要
+CRI Atom Craft向けのワークユニット（ACB）や全体設定（ACF）を、Unity5上のC#スクリプトで自動生成します。Assets/Materials配下のwavファイルを元にキューを作成し、Assetsフォルダ以下に指定名のワークユニットフォルダを生成します。
+
+## 構成
+- MakeAtomCraftData.cs：ワークユニット（ACB）生成用のEditorスクリプト
+- MakeAtomCraftACF.cs：全体設定（ACF）生成用のEditorスクリプト
+- README.md：導入・使い方・注意事項
 
 #セットアップ
 * Assets下にEditorフォルダを作成します。
 * EditorフォルダにMakeAtomCraftData.cs、MakeAtomCraftACF.csをコピーします。
 
-#使い方1.(ワークユニットファイル(ACB)の生成）
+## 使い方
+### 1. ワークユニットファイル（ACB）の生成
 * Assets下にMaterialsフォルダを用意します。
-* 使いたい波形を登録します
+* 使いたい波形（wav）をMaterialsに登録します。
 * メニュー「CRI>My>Open MakeAtomCraft...」を選択します。
 * キューシート名を設定して「Make Atom Craft Data」ボタンを押します。
 
-#使い方2.（全体設定(ACF)の生成）
+### 2. 全体設定（ACF）の生成
 * メニュー「CRI>My>Open MakeAtomACF...」を選択します。
 * ACF名、カテゴリを設定して「Make Atom ACF Data」ボタンを押します。
 
-#使い方3.（AtomCraftへの読み込み）
+### 3. AtomCraftへの読み込み
 できあがったatmcglobalsやwrokunitフォルダを、新規作成したAtomCraftのファイルへ上書きします。
+
+## 主な機能
+- Assets/Materials配下のwavからキューを自動生成
+- ACB（ワークユニット）フォルダを指定名で自動作成
+- ACF（全体設定）データの自動生成
 
 動画→https://www.youtube.com/watch?v=vCJa73xqK6I
 （仕様が変わったのでワークユニットに登録するところのみ参考に）
